@@ -1,0 +1,90 @@
+Promise in JavaScript : A Promise in JavaScript is an object that represents the result of an asynchronous operation
+                        e.g : You place an order → Pending
+                              Food delivered → Resolved
+                              Order cancelled → Rejected
+
+
+3 States of a Promise
+    Pending → initial state (waiting)
+    Resolved (Fulfilled) → success
+    Rejected → failure
+
+Syntax : 
+
+const promise = new Promise((resolve, reject) => {
+  // async work
+});
+
+- A Promise is a way to handle future results of async operations in a clean and structured way.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Synchronous Operations : one by one execution (line-by-line). Execution is blocking — next line won’t run until current line finishes.
+
+Asynchronous Operations : does NOT wait, runs in background . Tasks can run independently, without blocking the main flow.
+Common Async Methods : 1.  setTimeout : Runs a function once after a delay. It does not block execution (asynchronous). 
+                                    Use cases:
+                                        -Delay execution
+                                        -Show notifications after some time
+                                        -API retry after delay
+                       2.  setInterval : Runs a function repeatedly after a fixed interval. Keeps running forever until stopped.
+                                     Use cases:
+                                        -Clock updates ⏰
+                                        -Auto-refresh data
+                                        -Polling APIs
+                       3.  Promises(asyn/await) : A Promise is used to handle asynchronous operations and represents a value that may be available now, later, or never
+
+
+
+
+
+
+fetch() : built-in JavaScript function used to make HTTP requests (get data from APIs)
+
+Promise Chaining : Promise chaining is a pattern where you attach multiple .then() calls to a Promise so that the output of one step becomes the input of the next.Promise chaining means executing asynchronous tasks in sequence, passing results from one .then() to the next.
+eg : Promise.resolve(5)
+  .then(num => num * 2)
+  .then(num => num + 3)
+  .then(result => console.log(result));
+
+
+How It Works : Each .then():
+
+-Receives result from previous step
+-Returns a new value (or Promise)
+-Passes it to next .then()
+
+Fetch API : Used to make HTTP requests (GET / POST) and Returns a Promise.
+Promise Chaining : Using multiple .then() in sequence , Each step uses the result from the previous step , Final result is obtained in the last .then()
+
+How it works :
+
+fetch() - sends request to API
+First .then() - receives response
+Second .then() - converts response to JSON (res.json())
+Next .then() - processes data
+Final .then() - produces output
+.catch() - handles errors
+
+API Used in Api Practice :
+----------------------------
+
+1. Dog Facts API
+Returns random dog facts and extracts useful information from nested JSON data.
+2. Cat Facts API
+Fetches multiple cat facts using query parameters like count.
+3.Emoji API
+Provides a random emoji along with its name, category, and symbol.
+4. Currency API
+Returns real-time currency exchange rates based on a base currency (e.g., EUR).
+5. Portfolio Optimizer API
+Calculates optimal asset weights using a POST request with covariance matrix input.
+6. Foodish API
+Fetches random food images from a specific category like biryani.
+7. Disney API
+Returns a list of Disney characters and allows extraction of specific fields like names.
+8. Countries API
+Provides detailed country information such as name, capital, and other attributes.
+9. Radio Browser API
+Fetches a list of radio stations and allows filtering or slicing required data.
+10. IMDb Movie API
+Searches movies by query and returns titles using special JSON keys.
