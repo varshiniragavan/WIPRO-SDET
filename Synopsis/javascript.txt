@@ -1,0 +1,168 @@
+1 : DOM [Document Object Model] (Input Handling)
+Allows JavaScript to access and manipulate HTML elements using their ID
+document.getElementById("name");
+
+
+2 : typeof
+Checks the data type of a variable
+typeof x;
+
+3 : Switch case
+Handles multiple conditions based on a variable’s value
+switch(x){ case 1: break; }
+
+4 : Scope
+Defines where a variable can be accessed in the code
+let x = 5;
+
+
+5 : const / let / var
+Different ways to declare variables with different scope and mutability
+const a = 5;
+
+
+
+6 : Dynamic Typing
+A variable’s data type can be change at runtime
+let x = "5"; x = 5;
+
+
+7 : Object 
+Stores data in key-value pairs
+let obj = {name:"Aryan"};
+
+
+8 : Comparison Operators
+Compare values and return a boolean result
+a > b;
+a < b; 
+a == b; 
+a != b; 
+a >= b; 
+a <= b; 
+
+9 : Operators
+Perform mathematical or logical operations on values
+Addition:, a+b;
+Subtraction:, a-b;
+Multiplication:, a*b;
+Division:, a/b;
+Remainder:, a%b;
+
+
+10 : String Operations
+Functions used to manipulate or transform strings
+Original String:, str;
+Length of String:, str.length;
+Uppercase:, str.toUpperCase();
+Lowercase:, str.toLowerCase();
+SubString:, str.substring(0,4);
+
+
+11 : Splice
+Adds or removes elements from an array at a specific index
+arr.splice(1,1);
+
+
+12 : IndexOf & Includes
+Check whether an element exists in an array
+arr.includes(5);
+
+
+13 : Array Methods
+Built-in functions to modify or work with arrays
+arr.push(10);
+
+
+14 : parseInt / parseFloat
+Convert a string into an integer or floating-point number
+parseFloat("0.6");
+
+
+15 : Type Conversion
+Converts a value from one data type to another
+Number("5");
+
+
+16 : Random Number
+Generates a random integer within a range
+Math.floor(Math.random()*100);
+
+
+17 : forEach
+Iterates over each element of an array and executes a function
+arr.forEach(x => console.log(x));
+
+
+18 : Map
+Creates a new array by applying a function to each element
+arr.map(x => x*2);
+
+
+19 : Filter
+Returns a new array with elements that satisfy a condition
+arr.filter(x => x>2);
+
+
+20 : Array
+Stores multiple values in a single variable
+let arr = [1,2,3];
+
+
+21 : Loop (for)
+Repeats a block of code a specific number of times
+for(let i=0;i<5;i++) console.log(i);
+
+
+22 : Arrow Function
+A concise way to write functions using shorter syntax
+const add = (a,b) => a+b;
+
+
+23 : Function
+A reusable block of code that performs a specific task
+function add(a,b){ return a+b; }
+
+
+24 : String Length
+Returns the number of characters in a string
+console.log(str.length);
+
+
+25 : Template Literals
+Embed variables directly inside strings using ${}
+let str = `Hello ${name}`;
+
+
+26 : Math.floor()
+Rounds a number down to the nearest integer
+Math.floor(4.9);
+
+
+27 : Ceil
+Rounds up to nearest intege
+Math.ceil(Math.random()*100);
+
+
+28 : find
+Returns first matching element
+arr.find(x => x === 5);
+
+
+29 : unshift
+Add at beginning
+arr.unshift(val);
+
+
+30 : shift
+Remove from beginning
+arr.shift();
+
+
+31 : Reduce Function
+processes an array and returns a single accumulated result
+arr.reduce((acc,curr) =>{ //operation},acc)
+
+
+32 : DOM Manipulation
+Worked on Login-Form designing, Navigating to other pages using [window.location.href = "page_name"]; 
