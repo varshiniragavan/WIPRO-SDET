@@ -1,0 +1,213 @@
+1. Await : await is used inside an async function to pause the execution until a Promise is completed. Instead of using many .then() methods, await helps write cleaner code.
+
+Example:
+async function getData() {
+  let result = await Promise.resolve("Data received");
+  console.log(result);
+}
+getData();
+
+===================================================================================================================================================================================================
+
+
+2. Async Function : An async function is a function that always returns a Promise. It allows us to use await inside it. It is mainly used when working with APIs and delayed operations.
+
+Example:
+async function hello() {
+  return "Hello World";
+}
+hello().then(data => console.log(data));
+
+
+================================================================================================================================================================================================================
+
+
+3. JSON.parse() : JSON.parse() is used to convert a JSON string into a JavaScript object. It helps when data comes from a server in string format.
+
+Example:
+let text = '{"name":"John"}';
+let obj = JSON.parse(text);
+console.log(obj.name);
+
+================================================================================================================================================================================================================
+
+
+4. JSON.stringify() : JSON.stringify() converts a JavaScript object into a JSON string. It is useful when sending data to a server.
+
+Example:
+let user = {name: "John"};
+let text = JSON.stringify(user);
+console.log(text);
+
+================================================================================================================================================================================================================
+
+
+5. clearInterval() : clearInterval() is used to stop a repeated task created by setInterval().
+
+Example:
+let id = setInterval(() => console.log("Running"), 1000);
+clearInterval(id);
+
+================================================================================================================================================================================================================
+
+
+6. clearTimeout() : clearTimeout() is used to stop a delayed task created by setTimeout().
+
+Example:
+let id = setTimeout(() => console.log("Hello"), 3000);
+clearTimeout(id);
+
+================================================================================================================================================================================================================
+
+
+7. OOPS : OOPS is a programming style where we use classes and objects to organize code. It makes code reusable, secure, and easy to manage.
+
+Example:
+class Student {
+  study() {
+    console.log("Student is studying");
+  }
+}
+
+================================================================================================================================================================================================================
+
+
+8. Constructor : A constructor is a special method that runs automatically when an object is created. It is used to set initial values.
+
+Example:
+class User {
+  constructor(name) {
+    this.name = name;
+  }
+}
+
+
+================================================================================================================================================================================================================
+
+
+9. Access Modifier : Access modifiers control where variables and methods can be accessed. They help protect data.
+
+Example:
+class Test {
+  #data = 100;
+}
+
+
+================================================================================================================================================================================================================
+
+
+10. Private Variable : A private variable can only be accessed inside the same class. It improves security. used as (#)
+
+Example:
+class Bank {
+  #balance = 5000;
+}
+
+================================================================================================================================================================================================================
+
+
+11. Polymorphism : Polymorphism means one method, many forms. It means one method with different behavior in different classes.
+
+Example : 
+
+class Animal {
+  sound() {
+    console.log("Animal makes sound");
+  }
+}
+
+class Dog extends Animal {
+  sound() {
+    console.log("Dog barks");
+  }
+}
+
+class Cat extends Animal {
+  sound() {
+    console.log("Cat meows");
+  }
+}
+
+const animals = [new Dog(), new Cat()];
+
+animals.forEach(animal => animal.sound());
+
+
+Output : Dog barks
+         Cat meows
+
+=> Same method sound() gives different output.
+
+
+================================================================================================================================================================================================================
+
+
+
+12. Inheritance : Inheritance allows one class to use properties and methods of another class. It helps reduce code repetition.
+
+
+Example:
+class Animal {
+  eat() {
+    console.log("Animal eats food");
+  }
+}
+
+class Dog extends Animal {
+  bark() {
+    console.log("Dog barks");
+  }
+}
+
+const dog = new Dog();
+
+dog.eat();
+dog.bark();
+
+
+Output : Animal eats food
+         Dog barks
+
+=> Here, Dog uses both:
+
+Parent method → eat()
+Child method → bark()
+
+================================================================================================================================================================================================================
+
+
+ 
+13. Encapsulation : Encapsulation means hiding data and controlling access using methods.
+
+Example :
+
+
+class Account {
+  #balance = 1000;
+}
+
+================================================================================================================================================================================================================
+
+
+
+14. Abstraction : Abstraction means hiding the complex internal working of something and showing only the necessary features to the user
+
+Example : class CoffeeMachine {
+  #boilWater() {
+    console.log("Boiling water");
+  }
+
+  makeCoffee() {
+    this.#boilWater();
+    console.log("Coffee is ready");
+  }
+}
+
+const machine = new CoffeeMachine();
+machine.makeCoffee();
+
+Output : Boiling water
+         Coffee is ready
+
+
+=> Here, the user only calls makeCoffee() and does not know the internal process.
