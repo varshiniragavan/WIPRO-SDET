@@ -1,0 +1,12 @@
+ Go through with the topics
+  1.  Dom Manipulation
+  2.  Reduce Function
+  3.  Data Types In JavaScript
+  4.  Operators
+  5.  Conditional Statement
+  6.  Loop
+  7.  Function
+  8.  DOM Tree Structure (Document[Root of DOM], HTML Element(Root Element Wrapping Head and Body), Head and Body[Head : Title, Body : H1, p, Button])
+  9.  Basic Node 
+  10. Practice given 10 Questions and previous class Questions
+  
