@@ -13,8 +13,7 @@ const rawMovies = [
 ];
 
 function processMovies(rawMovies) {
-
-  // Step 1: Convert raw strings into objects
+    
   const parsedMovies = rawMovies.map((movie) => {
 
     const [name, genre, rawViews] = movie.split("|");
@@ -29,7 +28,6 @@ function processMovies(rawMovies) {
 
   });
 
-  // Step 2: Filter Action or Sci-Fi movies with more than 5000 views
   const filteredMovies = parsedMovies.filter((movie) => {
 
     return (
@@ -39,14 +37,12 @@ function processMovies(rawMovies) {
 
   });
 
-  // Step 3: Sort by views in descending order
   const sortedMovies = filteredMovies.sort((a, b) => {
 
     return b.views - a.views;
 
   });
 
-  // Step 4: Return JSON string
   return JSON.stringify(sortedMovies, null, 2);
 
 }
