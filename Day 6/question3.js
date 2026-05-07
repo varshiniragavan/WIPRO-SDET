@@ -2,7 +2,7 @@ const rawMovies = [
 
   "Inception|Sci-Fi|12000",
 
-  "The Lion King|Animation|8000",
+  "The Lion King|Animation|7000",
 
   "Mad Max|Action|invalid",
 
@@ -13,7 +13,7 @@ const rawMovies = [
 ];
 
 function processMovies(rawMovies) {
-    
+
   const parsedMovies = rawMovies.map((movie) => {
 
     const [name, genre, rawViews] = movie.split("|");
