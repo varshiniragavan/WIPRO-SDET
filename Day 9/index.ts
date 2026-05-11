@@ -58,3 +58,14 @@ names.addItems("Varsh");
 names.addItems("Swetha");
 names.addItems("Arya");
 console.log(names.getItem(0), names.getItem(1), names.getItem(2), names.getItem(3));
+
+interface HasLength {
+    length: number;
+}
+
+function logLength<T extends HasLength>(arg: T): void {
+    console.log(arg.length);
+}
+
+logLength("Varsh");
+logLength([1, 2, 3]);
