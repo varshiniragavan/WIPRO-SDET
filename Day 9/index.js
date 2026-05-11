@@ -1,3 +1,5 @@
+const axios = require('axios');
+
 async function getAstroData() {
     const URL = "http://api.open-notify.org/astros.json";
     const response = await axios.get(URL);
@@ -6,10 +8,9 @@ async function getAstroData() {
     const numberOfPeople = astroData.number;
     const craftNames = astroData.people.map(person => person.craft);
     
-    const astroList = document.getElementById('astroData');
-    astroList.innerHTML = peopleInSpace.map((name, index) => 
-        `<li>${name} (${craftNames[index]})</li>`).join('');
-    document.getElementById('numberOfPeople').textContent = numberOfPeople;
+    console.log("People in space:", numberOfPeople);
+    console.log("Names:", peopleInSpace);
+    console.log("Crafts:", craftNames);
 }
 
 getAstroData();
