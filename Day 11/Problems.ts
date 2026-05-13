@@ -1,16 +1,5 @@
 // 1. GENERIC API WRAPPER
 
-/*
-Problem:
-Create reusable generic fetch function that automatically types API response.
-
-Approach:
-- Use Generics <T>
-- Fetch data from API
-- Validate response
-- Convert response into typed JSON
-- Display strongly typed album data
-*/
 
 async function fetchData<T>(url: string): Promise<T> {
     const response = await fetch(url);
@@ -41,15 +30,6 @@ demo();
 
 // 2. RECORD MAPPING FOR CONFIGURATION
 
-/*
-Problem:
-Map every role to a boolean permission value.
-
-Approach:
-- Use enum for roles
-- Use Record utility type
-- Ensure all enum keys are covered
-*/
 
 enum Role {
     Admin = "Admin",
@@ -76,14 +56,6 @@ for (const role in PermissionMap) {
 
 // 3. EXHAUSTIVENESS CHECKING
 
-/*
-Problem:
-Ensure all union cases are handled safely.
-
-Approach:
-- Use switch statement
-- Use never type in default case
-*/
 
 console.log("\n3. Exhaustiveness Checking:");
 
@@ -123,13 +95,6 @@ handleTask("Closed");
 
 // 4. RECURSIVE NAVIGATION TYPE
 
-/*
-Problem:
-Create recursive folder structure.
-
-Approach:
-- Create nested FolderNode objects
-*/
 
 console.log("\n4. Recursive Navigation Type:");
 
@@ -170,13 +135,6 @@ console.log(JSON.stringify(projectFolder, null, 2));
 
 // 5. TEMPLATE LITERAL TYPES
 
-/*
-Problem:
-Allow only valid CSS spacing units.
-
-Approach:
-- Restrict values using template literal types
-*/
 
 console.log("\n5. Template Literal Types:");
 
@@ -196,13 +154,7 @@ console.log("Margin 2:", margin2);
 
 
 // 6. CONDITIONAL TYPES & infer
-/*
-Problem:
-Extract Promise resolved type.
 
-Approach:
-- Use infer keyword inside conditional type
-*/
 
 console.log("\n6. Conditional Types & infer:");
 
@@ -225,13 +177,7 @@ console.log("number remains:", "number");
 
 // 7. UNION MANIPULATION PUZZLE
 
-/*
-Problem:
-Extract and exclude union members.
 
-Approach:
-- Use Extract and Exclude utility types
-*/
 
 console.log("\n7. Union Manipulation Puzzle:");
 
@@ -266,14 +212,7 @@ console.log(event2);
 
 // 8. ASYNC HIGHER ORDER FUNCTION
 
-/*
-Problem:
-Wrap async functions safely.
 
-Approach:
-- Return wrapped async function
-- Handle errors internally
-*/
 
 console.log("\n8. Async Higher Order Function:");
 
@@ -306,14 +245,7 @@ safeFunction();
 
 
 // 9. INDEX SIGNATURES
-/*
-Problem:
-Allow dynamic metadata keys safely.
 
-Approach:
-- Use index signatures
-- Restrict allowed value types
-*/
 
 console.log("\n9. Index Signatures:");
 
@@ -332,9 +264,9 @@ const metadata: UserMetadata = {
 
     createdAt: new Date(),
 
-    username: "Arun",
+    username: "Varsh",
 
-    age: 22,
+    age: 23,
 
     verified: true
 };
@@ -345,15 +277,7 @@ console.log(metadata);
 
 
 // 10. MAPPED TYPES WITH KEY REMAPPING
-/*
-Problem:
-Transform object keys into API-style keys.
 
-Approach:
-- Use mapped types
-- Use keyof
-- Use template literals
-*/
 
 console.log("\n10. Mapped Types with Key Remapping:");
 
@@ -373,9 +297,9 @@ type CarApi = ApiResponse<Car>;
 
 const carData: CarApi = {
 
-    DATA_MAKE: "Tesla",
+    DATA_MAKE: "Porsche",
 
-    DATA_MODEL: "Model S"
+    DATA_MODEL: "911"
 };
 
 console.log("Mapped API Response:");
