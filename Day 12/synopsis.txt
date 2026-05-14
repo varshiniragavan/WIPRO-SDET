@@ -1,0 +1,121 @@
+JavaScript & TypeScript Synopsis
+
+JavaScript Concepts:
+
+map() → creates a new array
+filter() → filters array elements
+find() → returns first matching element
+reduce() → combines array values into one result
+async/await → handles asynchronous operations
+Promise → represents future completion of async operation
+try/catch → handles runtime errors
+
+TypeScript Basics:
+
+TypeScript = JavaScript + Type Safety
+Basic types: string, number, boolean, array, tuple, union
+Union Type Example:
+let value: number | string;
+
+Interface:
+
+interface User {
+   id: number;
+   name: string;
+}
+
+Optional Property:
+
+age?: number
+
+Readonly Property:
+
+readonly id: number
+
+Enum:
+
+enum Role {
+   Admin,
+   User
+}
+
+Generics:
+
+function identity<T>(arg:T):T {
+   return arg;
+}
+
+Utility Types:
+
+Partial<T> → makes all properties optional
+Omit<T,K> → removes properties
+Readonly<T> → makes all properties readonly
+Extract<T,U> → keeps matching union values
+Exclude<T,U> → removes matching union values
+
+Advanced TypeScript:
+
+keyof → gets object keys
+typeof → gets type from variable/object
+never → impossible value, used in exhaustive checking
+infer → extracts hidden type
+Template Literal Types:
+type Margin = `${number}px`
+
+Express.js:
+
+Express is a backend framework for Node.js
+Used to create APIs and servers
+
+Basic Express Server:
+
+const express = require('express');
+
+const app = express();
+
+app.get('/', (req,res)=>{
+   res.send("Hello");
+});
+
+app.listen(3000);
+
+Important Express Concepts:
+
+req → request object
+res → response object
+Route Params:
+req.params.name
+
+Playwright Basics:
+
+Playwright is an automation testing framework
+Used for browser automation and UI testing
+
+Core Concepts:
+
+page → browser tab/page
+locator → finds element
+click/fill → performs action
+expect → validation/assertion
+
+Common Playwright Methods:
+
+page.goto()
+locator()
+getByRole()
+click()
+fill()
+expect()
+
+Playwright Assertion Example:
+
+expect(page.url()).toBe("https://example.com");
+
+Important Commands:
+
+npm init -y
+npm install express
+tsc --init
+tsc
+npx ts-node file.ts
+npx playwright test
